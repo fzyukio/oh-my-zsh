@@ -85,6 +85,8 @@
 # the colored output of "git status -sb" and are available only when
 # using __git_ps1 for PROMPT_COMMAND or precmd.
 
+GIT_PS1_SHOWUPSTREAM="verbose"
+
 # check whether printf supports -v
 __git_printf_supports_v=
 printf -v __git_printf_supports_v -- '%s' yes >/dev/null 2>&1
@@ -283,7 +285,7 @@ __git_ps1 ()
 	local detached=no
 	local ps1pc_start='\u@\h:\w '
 	local ps1pc_end='\$ '
-	local printf_format=' (%s)'
+	local printf_format=' %s'
 
 	case "$#" in
 		2|3)	pcmode=yes

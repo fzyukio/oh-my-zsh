@@ -1,4 +1,4 @@
-PROMPT='$(virtualenv_info)%{$fg[blue]%}%n%{$reset_color%} on %{$fg[red]%}%M%{$reset_color%} in %{$fg[blue]%}%~%b%{$reset_color%}$(git_time_since_commit)$(check_git_prompt_info)
+PROMPT='$(virtualenv_info)%{$fg[blue]%}%n%{$reset_color%} on %{$fg[red]%}%M%{$reset_color%} in %{$fg[blue]%}%~%b%{$reset_color%}$(git_time_since_commit)$(__git_ps1))
 $ '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[white]%}"
